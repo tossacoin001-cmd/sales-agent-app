@@ -1,0 +1,282 @@
+{
+  "test_type": "offline specification consistency checks only",
+  "production_system_tested": false,
+  "customer_demand_validated": false,
+  "revenue_effectiveness_validated": false,
+  "checks": [
+    {
+      "id": "V01",
+      "scenario": "Invoice is not received cash",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "id": "V02",
+      "scenario": "Screenshot or owner claim is not verified cash",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "id": "V03",
+      "scenario": "Deposit counts only amount actually received",
+      "passed": true,
+      "actual": 210000,
+      "expected": 210000
+    },
+    {
+      "id": "V04",
+      "scenario": "Duplicate payment callback does not double count",
+      "passed": true,
+      "actual": 210000,
+      "expected": 210000
+    },
+    {
+      "id": "V05",
+      "scenario": "Verified refund reduces net cash",
+      "passed": true,
+      "actual": 160000,
+      "expected": 160000
+    },
+    {
+      "id": "V06",
+      "scenario": "Other workspace receipts excluded",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "id": "V07",
+      "scenario": "Currencies never summed without explicit conversion",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "id": "V08",
+      "scenario": "Sent without delivery receipt is not delivered",
+      "passed": true,
+      "actual": "accepted_unknown_delivery",
+      "expected": "accepted_unknown_delivery"
+    },
+    {
+      "id": "V09",
+      "scenario": "Hard failure is suppressed",
+      "passed": true,
+      "actual": "BLOCK_SUPPRESSED",
+      "expected": "BLOCK_SUPPRESSED"
+    },
+    {
+      "id": "V10",
+      "scenario": "Final connection failure is suppressed too",
+      "passed": true,
+      "actual": "BLOCK_SUPPRESSED",
+      "expected": "BLOCK_SUPPRESSED"
+    },
+    {
+      "id": "V11",
+      "scenario": "Pending delivery blocks manual resend",
+      "passed": true,
+      "actual": "HOLD_UNCERTAIN",
+      "expected": "HOLD_UNCERTAIN"
+    },
+    {
+      "id": "V12",
+      "scenario": "Ambiguous provider timeout blocks blind retry",
+      "passed": true,
+      "actual": "HOLD_UNCERTAIN",
+      "expected": "HOLD_UNCERTAIN"
+    },
+    {
+      "id": "V13",
+      "scenario": "Opt-out wins over commercial urgency",
+      "passed": true,
+      "actual": "BLOCK_OPT_OUT",
+      "expected": "BLOCK_OPT_OUT"
+    },
+    {
+      "id": "V14",
+      "scenario": "New calendar day never resets lifetime follow-up",
+      "passed": true,
+      "actual": "BLOCK_ALREADY_FOLLOWED",
+      "expected": "BLOCK_ALREADY_FOLLOWED"
+    },
+    {
+      "id": "V15",
+      "scenario": "Less than24h is not eligible",
+      "passed": true,
+      "actual": "HOLD_NOT_DUE",
+      "expected": "HOLD_NOT_DUE"
+    },
+    {
+      "id": "V16",
+      "scenario": "Partial history fails closed for sending",
+      "passed": true,
+      "actual": "HOLD_STALE",
+      "expected": "HOLD_STALE"
+    },
+    {
+      "id": "V17",
+      "scenario": "Revoked OAuth pauses writes",
+      "passed": true,
+      "actual": "HOLD_STALE",
+      "expected": "HOLD_STALE"
+    },
+    {
+      "id": "V18",
+      "scenario": "Unavailable WhatsApp is prepared only",
+      "passed": true,
+      "actual": "PREPARED_NOT_SENT",
+      "expected": "PREPARED_NOT_SENT"
+    },
+    {
+      "id": "V19",
+      "scenario": "Changed approved draft needs fresh approval",
+      "passed": true,
+      "actual": "APPROVAL_REQUIRED",
+      "expected": "APPROVAL_REQUIRED"
+    },
+    {
+      "id": "V20",
+      "scenario": "No authorisation means no dispatch",
+      "passed": true,
+      "actual": "APPROVAL_REQUIRED",
+      "expected": "APPROVAL_REQUIRED"
+    },
+    {
+      "id": "V21",
+      "scenario": "Priced scope needs explicit price",
+      "passed": true,
+      "actual": "SCOPE_INCOMPLETE",
+      "expected": "SCOPE_INCOMPLETE"
+    },
+    {
+      "id": "V22",
+      "scenario": "Quiet hours apply even near a deadline",
+      "passed": true,
+      "actual": "HOLD_QUIET_HOURS",
+      "expected": "HOLD_QUIET_HOURS"
+    },
+    {
+      "id": "V23",
+      "scenario": "Existing tool is not a proven paid need",
+      "passed": true,
+      "actual": "CONFIRM_ADDITIONAL_NEED",
+      "expected": "CONFIRM_ADDITIONAL_NEED"
+    },
+    {
+      "id": "V24",
+      "scenario": "Five-contact copy experiment cannot prove winner",
+      "passed": true,
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "expected": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "id": "V25",
+      "scenario": "Silence does not prove price objection",
+      "passed": true,
+      "actual": "TEST_TARGETING_OR_RELEVANCE_NO_CAUSAL_CLAIM",
+      "expected": "TEST_TARGETING_OR_RELEVANCE_NO_CAUSAL_CLAIM"
+    },
+    {
+      "id": "V26",
+      "scenario": "Stale data is a data gap before a sales diagnosis",
+      "passed": true,
+      "actual": "RESTORE_DATA_FIRST",
+      "expected": "RESTORE_DATA_FIRST"
+    },
+    {
+      "id": "V27",
+      "scenario": "Midnight counters use workspace timezone",
+      "passed": true,
+      "actual": "2026-10-27",
+      "expected": "2026-10-27"
+    },
+    {
+      "id": "V28",
+      "scenario": "Deposit target mix is720k,not1m",
+      "passed": true,
+      "actual": 720000,
+      "expected": 720000
+    },
+    {
+      "id": "V29",
+      "scenario": "No historical wins means no invented win probability",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "id": "V30",
+      "scenario": "Unfunded1m goal gap stays visible",
+      "passed": true,
+      "actual": 1000000,
+      "expected": 1000000
+    },
+    {
+      "id": "V31",
+      "scenario": "Reconcile current outgoing to initials+followups",
+      "passed": true,
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "id": "V32",
+      "scenario": "Known failures are11 distinct recipients",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "id": "V33",
+      "scenario": "No verified receipts means target not achieved",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    }
+  ],
+  "passed": 33,
+  "total": 33,
+  "aggregate_snapshot": {
+    "screened": 99,
+    "initials": 42,
+    "followups": 9,
+    "outgoing": 51,
+    "hard": 9,
+    "timeouts": 2,
+    "human": 1,
+    "interested": 0,
+    "cash": 0
+  },
+  "economic_assumptions": [
+    {
+      "scenario": "solo_light",
+      "price_ngn": 15000,
+      "assumed_direct_cost_ngn": 3500,
+      "gross_margin_percent": 76.67,
+      "passes_75pct_planning_gate": true
+    },
+    {
+      "scenario": "solo_heavy",
+      "price_ngn": 15000,
+      "assumed_direct_cost_ngn": 13500,
+      "gross_margin_percent": 10.0,
+      "passes_75pct_planning_gate": false
+    },
+    {
+      "scenario": "team_light",
+      "price_ngn": 35000,
+      "assumed_direct_cost_ngn": 8000,
+      "gross_margin_percent": 77.14,
+      "passes_75pct_planning_gate": true
+    },
+    {
+      "scenario": "team_heavy",
+      "price_ngn": 35000,
+      "assumed_direct_cost_ngn": 23000,
+      "gross_margin_percent": 34.29,
+      "passes_75pct_planning_gate": false
+    }
+  ]
+}

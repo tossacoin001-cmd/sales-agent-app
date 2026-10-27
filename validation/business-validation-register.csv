@@ -1,0 +1,13 @@
+id,claim,status,evidence_needed,decision
+B01,Target owners have a recurring enquiry or quote management problem,NOT_TESTED,Ten interviews with recent concrete examples,Choose one cohort only if problem gate passes
+B02,Owners will permit the minimum data access needed,NOT_TESTED,Consented walkthroughs and actual onboarding,Use manual or narrower input if broad access is rejected
+B03,Top-three action queue is clearer than a dashboard,NOT_TESTED,Five-user task and comprehension sessions,Redesign if critical misunderstanding occurs
+B04,Recommendations reduce review time,NOT_TESTED,Measured baseline and assisted time including data entry,Require useful improvement in at least three pilot businesses
+B05,Follow-up coverage improves without harming conversation quality,NOT_TESTED,Eligible opportunity denominator and evidenced completion,Do not count message volume as success
+B06,Owners pay the stated price and renew,NOT_TESTED,Actual pilot payments and unpressured renewal,Do not build on hypothetical willingness to pay
+B07,Recurring support and provider cost allow sustainable margin,ASSUMPTION_ONLY,Actual usage bills and support time,Heavy-use cost scenarios currently fail proposed margin gate
+B08,The app produces incremental revenue,NOT_TESTED,Longer outcome study with suitable comparison and attribution,No revenue guarantee or causal claim
+B09,The future multi-user implementation is isolated and safe,NOT_IMPLEMENTED,Tenant security and concurrency tests against actual code,Block public launch until tests pass
+B10,Workflow rules are internally consistent,OFFLINE_CHECKED,33 synthetic specification assertions,Useful design evidence only
+B11,Current workflow can be scaled globally,NOT_TESTED,Country and channel eligibility plus support and retention evidence,Launch one cohort first
+B12,Integration and merchant approvals fit budget and timeline,NOT_TESTED,Provider-specific review and approved accounts,Confirm before committing delivery dates
